@@ -1,0 +1,4 @@
+interface:
+  display_name: "Siemens NX 12 Modeling"
+  short_description: "Generate and validate version-safe NX 12 journals"
+  default_prompt: "Use $nx12-modeling to create a version-safe Siemens NX 12 journal for this modeling task."

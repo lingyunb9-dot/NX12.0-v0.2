@@ -1,0 +1,137 @@
+[
+  {
+    "path": "nx12-modeling/SKILL.md",
+    "size": 22225,
+    "sha256": "3998BE23B3CEC080FF19C9DE675E202364E57D352D3D2D55EC3B31DAE49E751F"
+  },
+  {
+    "path": "nx12-modeling/agents/openai.yaml",
+    "size": 234,
+    "sha256": "322C808EFF9300A43D77386E36A75FAA34776415F0E0F331199852BC2EC0EC66"
+  },
+  {
+    "path": "nx12-modeling/assets/templates/csharp-journal.cs",
+    "size": 18339,
+    "sha256": "88DB3750B3F12537BF121BF8870E12F58A0CF9715AC7357BA1C8ABB7C4492613"
+  },
+  {
+    "path": "nx12-modeling/assets/templates/drawing-feature-ledger.md",
+    "size": 11191,
+    "sha256": "FEDFDA2DFADDAF7206540EF4A6202E04589E020E7F6E3C274E7D9ECC352E4843"
+  },
+  {
+    "path": "nx12-modeling/assets/templates/geometry-acceptance-report.md",
+    "size": 15962,
+    "sha256": "6D912841F6D35EF0C032BA289CF39704963CEA521CAB068931A1085006213748"
+  },
+  {
+    "path": "nx12-modeling/assets/templates/python-journal.py",
+    "size": 5698,
+    "sha256": "A0D6A0A1438A6C0F279C8607DD8DE7C221AA823FEF9CA91537AB5D3635DC5B54"
+  },
+  {
+    "path": "nx12-modeling/references/api-validation.md",
+    "size": 12336,
+    "sha256": "B8ACBFFA693DF03D070B3FD33570D74FAECD374318815939CBC569A7876263FE"
+  },
+  {
+    "path": "nx12-modeling/references/cross-reading.md",
+    "size": 8185,
+    "sha256": "ECCA21E699745000D95E1101059E167DD8F174E80DD87DC332933BC38CD3164A"
+  },
+  {
+    "path": "nx12-modeling/references/drawing-and-drafting.md",
+    "size": 2810,
+    "sha256": "BC74709BE630BCC3F63BDF89F791F6077C0E0F5D8AA51D5F3AB75F71B66A5325"
+  },
+  {
+    "path": "nx12-modeling/references/drawing-reconstruction.md",
+    "size": 11864,
+    "sha256": "ED273AADF4A216375021A491D6B2965B6171FE95EB4A1CC6C6B584115BBD5C0E"
+  },
+  {
+    "path": "nx12-modeling/references/geometry-acceptance.md",
+    "size": 15256,
+    "sha256": "B7EEFF99E5C03E4CDD10CE1FE83887C3926602CA55A88B193A6B641A682F2A5D"
+  },
+  {
+    "path": "nx12-modeling/references/modeling-builders.md",
+    "size": 5727,
+    "sha256": "8298F91AAC3112B98FF8ADEE8CC404A3C65855E423C0186EC76BA347D93717F6"
+  },
+  {
+    "path": "nx12-modeling/references/nx12-environment.md",
+    "size": 5395,
+    "sha256": "8702C4AD7F6037C6C5F6DEF24A36E5C030C859A1963D0B042E9AC2197B37E45C"
+  },
+  {
+    "path": "nx12-modeling/references/nxopen-csharp-patterns.md",
+    "size": 5983,
+    "sha256": "4719B9DA52D422BC88FCB93B72CFADAB6E2221732A6EF01C574189170F77363B"
+  },
+  {
+    "path": "nx12-modeling/references/nxopen-python-patterns.md",
+    "size": 4621,
+    "sha256": "84A92C4CDDC29D650D6EF8AD4429C7AE2B99F6F074F3EF881AD4C0F47D5E685B"
+  },
+  {
+    "path": "nx12-modeling/references/reconstruction-review-cases.md",
+    "size": 21427,
+    "sha256": "467BCE8EE2652D8BD454D9026D040F8F777A344753D27D2DEE8392B298710A43"
+  },
+  {
+    "path": "nx12-modeling/references/runtime-observations.md",
+    "size": 2627,
+    "sha256": "C14F135A650D3A27832E911F55B9AF7D9FAC9D6F6FA43EEAFBD3DCA518A38EBD"
+  },
+  {
+    "path": "nx12-modeling/references/source-index.md",
+    "size": 3875,
+    "sha256": "4052BC50899BA0DC8AB5AB2B580DC0C5F451260016A9DA90DB5C0D20798F0B7B"
+  },
+  {
+    "path": "nx12-modeling/scripts/check-api-evidence.py",
+    "size": 8230,
+    "sha256": "80BB942DF1C670EB9E34B7E3397E993C4B6C30BA84722046BE974C7ACCE7928E"
+  },
+  {
+    "path": "nx12-modeling/scripts/create-journal-template.ps1",
+    "size": 9298,
+    "sha256": "DC74C00CF242E5438BD4A6A510DCDC3565D00A570587820531108647CA015C71"
+  },
+  {
+    "path": "nx12-modeling/scripts/inspect-nx-installation.ps1",
+    "size": 19714,
+    "sha256": "4ED1727069D67B829BD5F0BCAF0FB7F1A89210638E9C4D64840F0891DF43D26E"
+  },
+  {
+    "path": "nx12-modeling/scripts/journal_evidence.py",
+    "size": 31714,
+    "sha256": "5A9265F51B86FE1A8955FE58888D9B97FC4FE936FDCDFBEA1B731C2AE1D82B13"
+  },
+  {
+    "path": "nx12-modeling/scripts/nxopen_index.py",
+    "size": 17498,
+    "sha256": "AB295EF0A45E014D9C498B09FFFF4FD5FBF7CEB2E72DF5770DE0FC2E62649DE1"
+  },
+  {
+    "path": "nx12-modeling/scripts/probe-nx12-api.py",
+    "size": 21800,
+    "sha256": "F35844D1DC019CFD0B145748AFDE538740BB872AE356FC9673021ED6AA8F0F8A"
+  },
+  {
+    "path": "nx12-modeling/scripts/validate-journal.py",
+    "size": 50636,
+    "sha256": "EB43DA70AE9B9B36A98A514C98C7189F915D3D5479535DC843497B1DAF4A1C93"
+  },
+  {
+    "path": "nx12-modeling/scripts/validate-nx12-csharp.ps1",
+    "size": 38153,
+    "sha256": "F819AFCF04B7E722F289A6CE4DA9C4C97D2B37ACCE052637CA35B56357FF4AD9"
+  },
+  {
+    "path": "nx12-modeling/tests/test_nx12_skill.py",
+    "size": 102346,
+    "sha256": "9F90EFF8C66D190FCC4CD4E4FB03A941174D04D52043CB2CE7769ADE23E2F7A3"
+  }
+]
