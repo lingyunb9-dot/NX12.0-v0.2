@@ -28,7 +28,9 @@ The reverse holds too. Reading and analyzing a drawing does **not**, by itself, 
 
 Ask when the next step goes beyond what was requested, when the target file or export destination is unclear, when an object that is not authorized would be overwritten or modified, or when a decision only the user can make changes the construction. Apply the execution safety gate in `SKILL.md` before anything modifies a part; the existing part-protection and save/export rules are unchanged.
 
-Evidence classes are not interchangeable. A dimensioned engineering drawing and a section view carry dimensions a reader can check. A photograph, a rendered image, or a thumbnail carries proportions and appearance. Using the second as if it were the first is the most common way an invented dimension enters a model.
+Evidence classes are not interchangeable, but display format alone does not determine evidence quality. Record source provenance and annotation completeness separately from the representation used to view them. Photographs, appearance renderings and thumbnails that lack dimension annotations or have an unverifiable source support proportions and appearance, not checked drawing dimensions.
+
+A rendering of an ODG, SVG or vector PDF from a verifiable original can preserve the drawing's dimensions, leaders and sections. Use a clear rendering with the relevant annotations intact for drawing interpretation, and check visible annotation ownership through [cross-reading](cross-reading.md#1-read-related-views-together). Values estimated from screenshot pixels retain image-reading uncertainty; displaying a drawing as pixels does not itself downgrade its legible printed dimensions. Keep numeric evidence and evidence for feature type or ownership separately classified.
 
 ## Establish coordinates and view relationships
 

@@ -57,7 +57,9 @@ Record the scopes that were actually requested. A request that already covers re
 | Source document | {{FILE_OR_DRAWING_IDENTIFIER}} |
 | Revision or date | {{REVISION}} |
 | Pages used | {{PAGE_NUMBERS}} |
-| Source class | {{DIMENSIONED_DRAWING / SECTION_VIEW / PHOTOGRAPH / OTHER — state it, because the evidence classes are not equal}} |
+| Source class | {{DIMENSIONED_DRAWING / SECTION_VIEW / PHOTOGRAPH / OTHER — classify the source, not its display format}} |
+| Provenance and inspected representation | {{VERIFIABLE_ORIGINAL_AND_PAGE -> EXISTING_RENDER_OR_OTHER_VIEW_ACTUALLY_INSPECTED}} |
+| Annotation completeness and visibility | {{RELEVANT_DIMENSIONS_LEADERS_AND_SECTIONS_VISIBLE; ANY_MISSING_OR_UNREADABLE_ITEMS}} |
 | Missing or unusable sources | {{WHAT_COULD_NOT_BE_READ_AND_WHY}} |
 
 ## 3. Coordinates, views, and units
@@ -93,11 +95,11 @@ Feature-specific decisions that are easy to get wrong: state each one explicitly
 
 For drawing-driven work, complete [mandatory cross-reading](../../references/cross-reading.md) before fixing the corresponding feature interpretation and operations. Link shared group evidence once where appropriate. For a small task, an equivalent compact record is sufficient; the actual view evidence and decision remain required.
 
-| feature_id / group | Related views and each observation | Material, quantity and connectivity | Dimension ownership, direction and datum chain | Interpretation and rejected alternatives, if ambiguous | Remaining uncertainty and basis for proceeding or blocking | Acceptance items that distinguish the interpretation |
+| feature_id / group | Related views and each added constraint | Material, quantity and connectivity | Dimension ownership, direction and datum chain | Interpretation and rejected alternatives, if ambiguous | Remaining uncertainty and basis for proceeding or blocking | Acceptance items that distinguish the interpretation |
 | --- | --- | --- | --- | --- | --- | --- |
-| {{F001}} | {{VIEW_A_EVIDENCE; VIEW_B_EVIDENCE, or available-view limitation}} | {{RETAINED_AND_EMPTY_REGIONS}} | {{RAW_MARK -> ENDPOINTS -> EDGE_OR_FACE -> DIRECTION_AND_DATUM -> LOCAL_OR_CIRCUMFERENTIAL_SCOPE}} | {{SELECTED_TYPE_AND_EVIDENCE_THAT_REJECTS_PLAUSIBLE_ALTERNATIVES}} | {{SETTLED_FOR_SCOPE / SPECIFIC_MISSING_EVIDENCE / EXPLICIT_USER_CHOICE_AND_SCOPE, in prose}} | {{A001, A004_AND_HOW_THEY_COULD_REJECT_THE_WRONG_TYPE}} |
+| {{F001}} | {{EACH_RELATED_VIEW_AND_ITS_CONSTRAINT; AVAILABLE_VIEW_LIMITATIONS}} | {{RETAINED_AND_EMPTY_REGIONS}} | {{RAW_MARK -> ENDPOINTS -> EDGE_OR_FACE -> DIRECTION_AND_DATUM -> LOCAL_OR_CIRCUMFERENTIAL_SCOPE}} | {{SELECTED_TYPE_AND_EVIDENCE_THAT_REJECTS_PLAUSIBLE_ALTERNATIVES}} | {{EVIDENCE_SUFFICIENT_FOR_SCOPE, INCLUDING_SINGLE_VIEW_BASIS_WHEN_USED / SPECIFIC_MISSING_EVIDENCE / EXPLICIT_USER_CHOICE_AND_SCOPE, in prose}} | {{A001, A004_AND_HOW_THEY_COULD_REJECT_THE_WRONG_TYPE}} |
 
-Record the reading's actual timing in section 1. Keep the evidence class of the numeric value separate from that of its ownership/type when they differ. State view limitations rather than inventing corroboration. Completion of this record is not a geometry `PASS`; the completion criterion and treatment of critical unresolved items are in the linked procedure.
+Record the reading's actual timing in section 1. Keep the evidence class of the numeric value separate from that of its ownership/type when they differ. For a single-view decision, fill in the determining annotations, material relationships, geometric conditions and evidence excluding plausible alternatives as required by [cross-reading section 4](../../references/cross-reading.md#4-record-the-decision-and-its-falsification-check). State view limitations rather than inventing corroboration. Completion of this record is not a geometry `PASS`; the completion criterion and treatment of critical unresolved items are in the linked procedure.
 
 Thread expression: {{WHAT THE ESTABLISHED DELIVERY REQUIREMENT ALLOWS OR REQUIRES FOR EACH THREADED FEATURE, AND WHAT THE MODEL ACTUALLY CARRIES}}. An expression that the requirement already allowed is not a simplification — record it here. If a requirement in force was later approved away or replaced, record that in section 6 instead.
 

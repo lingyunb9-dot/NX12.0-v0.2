@@ -6,7 +6,9 @@ Use this procedure for reconstruction from a drawing and for checking a model ag
 
 For each feature or related feature group, locate its relevant principal, side, end and section views. Follow section arrows and establish the observation direction before transferring a position or angle. Use dimensioned views and sections to constrain geometry; use an isometric view to help check correspondence and visible topology.
 
-Record what each relevant view contributes. Two crops of the same view are not two independent geometric constraints. When only one usable view exists, record the missing evidence and assess whether the available dimensions and material relationships determine the feature. Do not invent another view or stop a fully determined feature merely to reach a view count. A critical unresolved interpretation blocks the affected feature; unrelated, settled work may continue.
+For ODG, SVG and vector PDF sources, inspect an actual rendered view to check annotations, leader and dimension-line endpoints, section material, and correspondence between views. XML text, OCR and extracted vector paths can help locate or measure evidence, but cannot alone establish its ownership without this visible drawing check. Reuse an existing clear, trustworthy rendering with traceable provenance; conversion need not be repeated. Record any missing or unreadable annotations rather than treating extracted text as a substitute.
+
+Record the geometric constraint each relevant view adds. For topology ambiguities such as hole/boss, slot/rib, two ears/one solid feature, or local/full-circumference geometry, check all available related views. Enlargements, crops and repeated screenshots of one view do not add independent geometric constraints. If one usable view exists, or a simple feature is fully determined by one view, record the single-view basis in [section 4](#4-record-the-decision-and-its-falsification-check), including any evidence limitation. Do not invent another view or impose a fixed view count on a fully determined feature. A critical unresolved interpretation blocks the affected feature; unrelated, settled work may continue.
 
 ## 2. Establish material relationships before choosing operations
 
@@ -31,6 +33,8 @@ For curves and surfaces, establish the generating rule as well as its parameters
 ## 4. Record the decision and its falsification check
 
 Use the feature ledger's cross-reading record, or an equivalent compact record for a small task. Name the relevant views and observations, the interpretation selected, rejected alternatives where applicable, remaining uncertainty, and the check that could expose the wrong interpretation.
+
+For a single-view decision, identify the specific annotations, material relationships and geometric conditions in that view that together determine the feature. If a plausible competing interpretation exists, record which evidence rules it out. Statements such as "looks clear" or "already determined" are not a basis for proceeding. If an alternative that changes critical geometry remains possible, isolate the affected feature and continue work that does not depend on it.
 
 This step is complete only when the selected interpretation accounts for the relevant views, material distribution, dimension ownership and coordinate relationships, and the critical contradictions have been resolved for the authorized scope. A note saying only "cross-reading completed" is insufficient. If the user explicitly chooses a candidate or approximation, preserve the choice and its scope; it does not make the drawing uniquely determine that geometry. Ask only for an unresolved decision that the existing request has not already settled.
 

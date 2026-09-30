@@ -16,8 +16,8 @@
   },
   {
     "path": "nx12-modeling/assets/templates/drawing-feature-ledger.md",
-    "size": 11191,
-    "sha256": "FEDFDA2DFADDAF7206540EF4A6202E04589E020E7F6E3C274E7D9ECC352E4843"
+    "size": 11785,
+    "sha256": "A1B0A079FEECE63C1353C79CEE7A195755EF8B371F6913B30F5DDB6E51BD72AB"
   },
   {
     "path": "nx12-modeling/assets/templates/geometry-acceptance-report.md",
@@ -36,8 +36,8 @@
   },
   {
     "path": "nx12-modeling/references/cross-reading.md",
-    "size": 8185,
-    "sha256": "ECCA21E699745000D95E1101059E167DD8F174E80DD87DC332933BC38CD3164A"
+    "size": 9451,
+    "sha256": "643C3916A7D004ADAD575E7F937944548846867BF9132CBD92AA647012BBAC98"
   },
   {
     "path": "nx12-modeling/references/drawing-and-drafting.md",
@@ -46,8 +46,8 @@
   },
   {
     "path": "nx12-modeling/references/drawing-reconstruction.md",
-    "size": 11864,
-    "sha256": "ED273AADF4A216375021A491D6B2965B6171FE95EB4A1CC6C6B584115BBD5C0E"
+    "size": 12519,
+    "sha256": "025998300C3FE5891AA0A00631EBF8BDA1DB56C15FF0F5A531E3275FDC539721"
   },
   {
     "path": "nx12-modeling/references/geometry-acceptance.md",
