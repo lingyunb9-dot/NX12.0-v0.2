@@ -1,8 +1,8 @@
 [
   {
     "path": "nx12-modeling/SKILL.md",
-    "size": 22225,
-    "sha256": "3998BE23B3CEC080FF19C9DE675E202364E57D352D3D2D55EC3B31DAE49E751F"
+    "size": 22527,
+    "sha256": "A4D228A4535CE908754B7235F8552DF9400217A7EB41694A362E919C8287FE25"
   },
   {
     "path": "nx12-modeling/agents/openai.yaml",
@@ -16,13 +16,13 @@
   },
   {
     "path": "nx12-modeling/assets/templates/drawing-feature-ledger.md",
-    "size": 11785,
-    "sha256": "A1B0A079FEECE63C1353C79CEE7A195755EF8B371F6913B30F5DDB6E51BD72AB"
+    "size": 13306,
+    "sha256": "DFD8DBE048F6D970551ADDA78F8F7D294025583AD9A662C1E88BC4B85C2098C4"
   },
   {
     "path": "nx12-modeling/assets/templates/geometry-acceptance-report.md",
-    "size": 15962,
-    "sha256": "6D912841F6D35EF0C032BA289CF39704963CEA521CAB068931A1085006213748"
+    "size": 17061,
+    "sha256": "E480AD352B639AC5EE31ECF58D8496786B59747BCC837392AE868E947107B433"
   },
   {
     "path": "nx12-modeling/assets/templates/python-journal.py",
@@ -36,8 +36,8 @@
   },
   {
     "path": "nx12-modeling/references/cross-reading.md",
-    "size": 9451,
-    "sha256": "643C3916A7D004ADAD575E7F937944548846867BF9132CBD92AA647012BBAC98"
+    "size": 11069,
+    "sha256": "6E444C253BA703234F18E5DBD897C35A74B30A8C95259D3397DD34C1B1AFF822"
   },
   {
     "path": "nx12-modeling/references/drawing-and-drafting.md",
@@ -51,8 +51,8 @@
   },
   {
     "path": "nx12-modeling/references/geometry-acceptance.md",
-    "size": 15256,
-    "sha256": "B7EEFF99E5C03E4CDD10CE1FE83887C3926602CA55A88B193A6B641A682F2A5D"
+    "size": 16922,
+    "sha256": "72FE99EB743CE0F15249C088FCF6F8533E357CF1E133E0061E4EBAC4B7FE84CA"
   },
   {
     "path": "nx12-modeling/references/modeling-builders.md",
@@ -76,8 +76,8 @@
   },
   {
     "path": "nx12-modeling/references/reconstruction-review-cases.md",
-    "size": 21427,
-    "sha256": "467BCE8EE2652D8BD454D9026D040F8F777A344753D27D2DEE8392B298710A43"
+    "size": 25813,
+    "sha256": "63341ADEDC6CA2EB116D16791E00B247BF096E5797B5D8123CDB6AB93971DF11"
   },
   {
     "path": "nx12-modeling/references/runtime-observations.md",

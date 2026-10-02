@@ -28,6 +28,12 @@ Record axial, radial and tangential quantities separately, including a hole's ow
 
 State whether a value controls a local span, a radius/diameter, a pitch circle or an overall extent. Bind a radius to its actual leader and edge. Nearby numbers and similar-looking arcs do not establish ownership. Keep the evidence class of the numeric reading separate from the evidence class of its interpretation: an explicit diameter can still have an unresolved owner.
 
+For stepped features, list every diameter and its start/end boundary along the feature's own axis. Distinguish a hole-axis offset from an outer extent, a pitch circle from a cavity arc, and a tool's travel from the depth inside the solid. For rounded slots or ribs, record end-circle centre distance separately from total length. Trace each fillet/chamfer leader to its acting edge and each local tolerance or roughness note to its owning feature or face.
+
+For threads, cross-read section material, root relief, internal bore and mating-part evidence before deciding internal/external geometry or declaring a size conflict. Keep the printed tolerance designation separate from the geometry interpretation; record an inconsistent designation as an open question rather than silently changing it or resizing the surrounding material. Standard-derived values and construction/fitting choices retain their provenance; neither is a printed dimension.
+
+For vector-derived dimensions, record the calibration dimension, page transform, scale, units and residual/reading uncertainty. Reconcile differing scales before deriving dependent geometry; keep this uncertainty separate from manufacturing tolerance.
+
 For curves and surfaces, establish the generating rule as well as its parameters: section shape and correspondence, axis, interval, units, hand, phase, thickness and end treatment. A guide-line pitch alone does not define the complete swept or lofted surface. See [drawing-reconstruction.md](drawing-reconstruction.md#curves-and-surfaces). A candidate construction or vector-derived value retains its stated basis and uncertainty.
 
 ## 4. Record the decision and its falsification check
@@ -46,7 +52,7 @@ For zero wall thickness, unexpected breakthrough, negative remaining wall thickn
 
 `material relationship -> dimension ownership -> direction/datum -> surface construction -> CAD tolerance or API behavior`
 
-The exception describes the submitted geometry. It does not by itself establish a defect in the drawing. Keep nominal dimensions until the evidence supports a change; widening a rib to accommodate a misread hole can make the wrong geometry build successfully.
+The exception describes the submitted geometry. It does not by itself establish a defect in the drawing. If a candidate surface misses a section, test its generating rule, guide-edge correspondence, view registration, hand and phase while retaining explicit dimensions such as pitch. A failed candidate is not evidence that the printed requirement is wrong or that the available views cannot define the surface. Keep nominal dimensions until the evidence supports a change; widening a rib to accommodate a misread hole can make the wrong geometry build successfully.
 
 When an interpretation changes, identify its dependent features and checks. Preserve the original measurements with their artifact and original expectations; record which expectations are withdrawn or limited, derive replacements from the corrected reading, and recheck the new model. A withdrawn basis is an explanation about old evidence, not an additional geometry status or permission to erase a failure.
 
@@ -63,4 +69,4 @@ These are lessons from an iteratively corrected, user-accepted SKDZ-01 delivery.
 | Opposed spans were turned into complete circular cavities | Combine the section levels with feet or keys shown in the end view | Preserved circumferential sectors, gaps, and axial levels |
 | A fork became one solid lug with a radial hole | Separate axial height, tangential ear/gap widths and the transverse hole axis | Material in both ears, void in the gap and hole, correct hole axis and connectivity |
 
-The accepted delivery's local checks, user acceptance and remaining manufacturing/surface limits are separate facts. The historical run used the predecessor skill; it is motivation for these rules, not evidence that version 0.2 has already passed a fresh modeling trial.
+The historical delivery's recorded local checks, user acceptance and remaining manufacturing/surface limits are separate facts; they do not establish current conformance when later source-derived review finds required failures. The historical run used the predecessor skill; it is motivation for these rules, not evidence that version 0.2 has already passed a fresh modeling trial.

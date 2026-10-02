@@ -101,6 +101,16 @@ For drawing-driven work, complete [mandatory cross-reading](../../references/cro
 
 Record the reading's actual timing in section 1. Keep the evidence class of the numeric value separate from that of its ownership/type when they differ. For a single-view decision, fill in the determining annotations, material relationships, geometric conditions and evidence excluding plausible alternatives as required by [cross-reading section 4](../../references/cross-reading.md#4-record-the-decision-and-its-falsification-check). State view limitations rather than inventing corroboration. Completion of this record is not a geometry `PASS`; the completion criterion and treatment of critical unresolved items are in the linked procedure.
 
+### 4.2 Controlling dimensions and interpretation changes
+
+For complex features, enumerate the controlling dimensions under the existing feature ID. Include unchanged requirements, every stepped segment and its boundaries, and derived values; do not list only known errors. A compact equivalent is sufficient for a small task.
+
+| feature_id / dimension | Raw mark and source | Owner, direction, start/end datums | Numeric basis / ownership basis | Derivation or standard/construction provenance | Initial reading -> current reading and reason | Affected acceptance items |
+| --- | --- | --- | --- | --- | --- | --- |
+| {{F001 / DIMENSION_OR_SEGMENT_ID}} | {{AS_PRINTED_OR_NO_SEPARATE_PRINTED_VALUE; PAGE_VIEW_REGION}} | {{EDGE_FACE_AXIS_AND_FINITE_BOUNDARIES}} | {{CLASSIFY_VALUE_AND_OWNER_SEPARATELY}} | {{SOURCE_CHAIN_OR_STANDARD_BASIS; FLAG_CANDIDATE_OR_FIT}} | {{READINGS_ACTUAL_CHANGE_TIME_AND_EVIDENCE, or unchanged}} | {{A001_AND_REPLACEMENT_CHECK_IDS}} |
+
+Vector/image measurement basis, if used: {{CALIBRATION_DIMENSION, PAGE_TRANSFORM, SCALE_AND_UNITS, RESIDUAL_AND_READING_UNCERTAINTY; HOW_DIFFERING_SCALES_WERE_RECONCILED}}. Keep thread type, root relief, internal bore, mating evidence and any inconsistent printed tolerance designation distinct. Preserve conditional user discussions as conditional until an actual choice or model change occurs; a revised interpretation is not a revised model. See [dimension tracing](../../references/cross-reading.md#3-trace-dimensions-into-a-common-coordinate-system).
+
 Thread expression: {{WHAT THE ESTABLISHED DELIVERY REQUIREMENT ALLOWS OR REQUIRES FOR EACH THREADED FEATURE, AND WHAT THE MODEL ACTUALLY CARRIES}}. An expression that the requirement already allowed is not a simplification — record it here. If a requirement in force was later approved away or replaced, record that in section 6 instead.
 
 ## 5. Ambiguities and user confirmations

@@ -2,6 +2,29 @@
 
 本版由既有 `nx12-modeling` 版本独立派生，修改6份文档/记录模板，新增2份参考。8个工具脚本、既有测试、Python/C# Journal模板及agents配置保持不变。新skill共27个非缓存文件。
 
+## v0.2-r2 尺寸台账与验收复查修订
+
+修订日期：2026-10-02。以新提供的回顾性尺寸台账为修订依据，保留 `metadata.version: "0.2"`。本次仅修改6份现有skill文档/记录模板，更新README、版本说明及清单，不引入个案尺寸默认值或自动几何认证。
+
+| 文件 | 本次修正 |
+| --- | --- |
+| [SKILL.md](nx12-modeling/SKILL.md) | 在验收入口要求按全部控制尺寸检查覆盖，并指向分段边界及拟合/验证分离的方法 |
+| [cross-reading.md](nx12-modeling/references/cross-reading.md) | 区分孔轴偏距与外端、孔距圆与凹弧、圆端中心距与总长；逐段绑定直径与有限边界，分别读取螺纹几何、退刀段、内孔、配合和标注疑点；记录矢量量测比例及误差，候选失败时先复查生成法 |
+| [geometry-acceptance.md](nx12-modeling/references/geometry-acceptance.md) | 检查所有孔段、台阶和保留材料，实体孔深不计刀具越界；拟合残差与留出验证分别报告；新发现必需项FAIL时重算两个要求集的当前结论 |
+| [drawing-feature-ledger.md](nx12-modeling/assets/templates/drawing-feature-ledger.md) | 增加控制尺寸及解释变化表，记录数值/归属分别定级、推导或标准/构造来源、初读/现读、影响检查和量测比例；条件式讨论不写成模型已回退 |
+| [geometry-acceptance-report.md](nx12-modeling/assets/templates/geometry-acceptance-report.md) | 补齐覆盖、真实孔深、反证点、拟合/验证数据及历史结论被替代的记录要求 |
+| [reconstruction-review-cases.md](nx12-modeling/references/reconstruction-review-cases.md) | 增加R-18至R-21四个通用规则走查案例，涵盖漏段/孔深、改螺距拟合、旧结论失效与螺纹标注冲突 |
+
+历史交付、用户选择和历史检查仍作为当时事实保留。新的勘误只修正读图与验收解释，不能写成模型已修复；原图要求和批准范围仍分别判断，批准范围内新证实的必需项FAIL同样使其当前结论为FAILED。原始台账、用户本机路径、CAD文件和历史会话不纳入公开包。
+
+本轮验证：
+
+- 现有118项回归测试通过，0失败、0错误、0跳过；8个运行脚本、测试文件、两个Journal模板和agents配置，共12个文件与远端main源文件逐字节一致。
+- skill内78处链接及锚点检查通过；27项文件清单覆盖完整，仅更新本次6份skill文档/模板的大小和SHA-256。
+- 编写者审查差异并走查R-18至R-21及台账中的尺寸归属、尺度误差、端部/作用边等情形；这是规则语义自查，不是独立盲测或自动几何验证。
+- 官方 `quick_validate.py` 在本轮两个已有Python环境均因缺少PyYAML未完成，未记为通过，未安装依赖；现有回归套件的frontmatter和路径检查通过。r1格式校验通过是历史记录，不能替代本轮结果。
+- 本次未启动NX或重验任何PRT。测试包含本机目标程序集编译检查，编译不等于执行或模型符合性；新增自然语言规则仍待新的实际建模任务验证。
+
 ## v0.2-r1 定向修订
 
 修订日期：2026-09-30。skill元数据版本仍为 `0.2`。相对初版，本轮仅修改以下三份skill文档/记录模板，并更新公开说明和文件哈希清单。

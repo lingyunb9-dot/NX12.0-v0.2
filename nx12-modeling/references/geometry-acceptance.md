@@ -63,6 +63,10 @@ When a corrected reading invalidates an old expectation, preserve that measureme
 
 Check the diameter, the axis and its position, the depth, whether it is through or blind, any step or counterbore, and the repeat count and angular spacing for a pattern.
 
+For a stepped bore, enumerate every segment's diameter and finite start/end boundaries, including its connection to the main bore. Check material that must remain between adjacent diameters and on either side of a step boundary. A correct cylindrical radius or the presence of two surfaces does not establish that all required segments exist at the right positions.
+
+Measure depth from the actual solid entry surface to the required internal boundary along the specified axis or section. A cutting tool extending beyond the outer surface does not add that overtravel to the hole depth. On a curved entry surface, distinguish the centre-section depth from depths at other offsets.
+
 A point at a hole centre reading "outside the solid" proves exactly that: that this sample point is not inside the material. It does not establish the diameter and it does not establish the depth. A hole whose centre point is empty may be the wrong size, the wrong depth, blind where it should be through, or a different feature entirely.
 
 ### Slots, ribs, and cavities
@@ -80,6 +84,8 @@ Check the count, the angular spacing, the phase, the shape of a single instance,
 ### Free-form surfaces
 
 Check the parameter interval, the sections, the twist law, the deviation at intermediate positions, the extremes, the local thickness, and any self-intersection or unexpected bulge.
+
+Record which source points, views or sections were used to fit or tune the candidate and which were reserved for validation. A residual evaluated on the fitting data describes fit quality only. Validate against source constraints not used in tuning and inspect intermediate sections over a stated range; if no such evidence is available, report that limitation and leave the corresponding independent-validation checks `NOT_RUN` or `BLOCKED`.
 
 Any finite sampling states the range it covered. It is never described as a full mathematical proof over the whole surface.
 
@@ -112,7 +118,7 @@ Keep these four apart:
 - The manufacturing tolerance stated on the drawing.
 - The requirement that a CAD model be nominal.
 - Measurement and algorithm error.
-- Uncertainty from reading an image.
+- Uncertainty from reading an image or quantifying source vector paths, including calibration and fitting residuals.
 
 Do not widen a tolerance so that a check passes. A manufacturing tolerance permits a real part to deviate; it is not permission for the nominal CAD model to drift. A size estimated from a low-resolution image is not presented as a precise measurement.
 
@@ -172,6 +178,7 @@ Ways this conclusion gets abused, and the rule that closes each:
 - An empty checklist is not a `PASSED`. A list of nothing but `N/A` entries is not a measurement either: a hollow checklist does not certify the part.
 - An artificially trimmed checklist — requirements dropped because they were inconvenient rather than because they do not apply — is the empty-checklist case in disguise.
 - With the original drawing missing or the acceptance conditions incomplete, the set cannot reach `PASSED`.
+- Recompute a current conclusion when corrected expectations or new measurements invalidate a historical conclusion. Preserve the earlier conclusion with its date, artifact and original basis, and mark which current conclusion supersedes it. A confirmed required failure in the approved delivery set makes that set `FAILED` too, even when its approved deviations from the drawing are unrelated. Correcting the reading alone leaves the saved geometry unchanged.
 
 ### Drawing conformance and approved-scope conformance
 

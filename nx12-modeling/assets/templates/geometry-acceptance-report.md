@@ -89,6 +89,9 @@ Status values: `PASS` (suitable evidence exists and the condition is met), `FAIL
 Method rules that must be visible in this table:
 
 - For topology-sensitive features, state how the check distinguishes the plausible wrong interpretation recorded during cross-reading. Use material-side, extent and connectivity evidence alongside a surface's radius and axis; reference [the acceptance methods](../../references/geometry-acceptance.md#checks-that-distinguish-feature-interpretations).
+- Coverage maps every controlling ledger dimension to a check or an explicit unchecked/blocked item; include unchanged requirements and every stepped segment's diameter and finite boundaries.
+- Depth records the actual solid entry surface and internal boundary along the specified axis/section, separately from tool travel outside the solid. Material samples distinguish competing radii, hole positions and step boundaries, away from numerical ambiguity.
+- Surface-fit evidence names the fitting data separately from the source points/views/sections reserved for validation. Residuals on fitting data alone are not independent validation.
 - A hole centre reading "outside the solid" appears with its limitation stated: it proves the sample point is not in material, and does not establish diameter or depth.
 - Bounding-box evidence is recorded with the limitation that it proves axis-aligned overall extents only. It never stands in for a diameter, a local dimension, or a surface check.
 - Point-containment checks record which points were chosen and why, including any boundary, hole-wall, hole-bottom, or must-remain-material samples, and state that a fixed point count proves nothing by itself.
@@ -122,6 +125,7 @@ Rules that keep the two apart:
 - After the model is modified, the check is run again **against the new version**. A repair is not evidence.
 - The original failure record, the model version it was observed on, and its evidence are retained. A new record cites the new version and the new result; it never overwrites the historical failure evidence.
 - If cross-reading changes an expectation, retain the old measurements and their original basis. Record the withdrawn or limited interpretation separately, identify the dependent checks and their replacements, and measure the new version. Explanatory labels do not replace a per-check status.
+- When new evidence invalidates an earlier overall conclusion, retain that conclusion with its date, artifact and original basis; identify the replacement expectations/checks and state the superseding current conclusion for each affected requirement set. Corrected documentation alone does not repair saved geometry. A required failure still in the approved delivery set makes its current conclusion `FAILED`, regardless of unrelated approved simplifications.
 - A read-only review may record `OPEN` and stop there. Recording a remediation status does not authorize starting the repair.
 - When this delivery does not track remediation, omit only the `Remediation status` column. Keep `Model version`, or replace that column with an explicit reference to an unambiguous artifact/version identifier recorded elsewhere in the report. Every non-conformance record must remain traceable to the model version on which it was observed. No script or mandatory remediation workflow is added for this.
 

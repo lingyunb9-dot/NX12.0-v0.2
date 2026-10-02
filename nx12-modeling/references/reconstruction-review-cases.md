@@ -211,3 +211,43 @@ Thread questions take three different shapes, and they end differently. None of 
 **Forbidden conclusions.** "Closing the remediation closed the failure." Also forbidden: overwriting the historical failure evidence with the new record, or treating the repair itself as evidence.
 
 **Rule location.** [geometry-acceptance-report.md](../assets/templates/geometry-acceptance-report.md) § 6 and § 10; [geometry-acceptance.md](geometry-acceptance.md) § *Overall conclusion*.
+
+## R-18 — Correct bore radii conceal an omitted inner segment and wrong depth
+
+**Input facts.** A drawing requires three coaxial bore segments. The checker finds the two outer radii but never checks the inner segment or any step boundaries. A tool extends beyond a curved outer wall, and its travel is reported as the depth.
+
+**Required decision.** Derive all segment diameters and finite boundaries from the drawing. Measure depth inside the solid on the specified axis/section, and inspect the material that distinguishes adjacent segments and step positions. Until measured, the missing checks are `NOT_RUN` or `BLOCKED`; if the saved bore demonstrably omits a required segment, its check is `FAIL` and the governing set is `FAILED`.
+
+**Forbidden conclusions.** “The bore passes because its radii exist.” “Tool travel is hole depth.”
+
+**Rule location.** [cross-reading.md](cross-reading.md#3-trace-dimensions-into-a-common-coordinate-system); [geometry-acceptance.md](geometry-acceptance.md#holes).
+
+## R-19 — A candidate misses a section and the guide pitch is changed to improve its fit
+
+**Input facts.** The drawing states a guide pitch. A candidate assumes identical sections rotate rigidly with height, misses a section, then changes pitch, width and phase. The same source points are used for fitting and reporting residuals.
+
+**Required decision.** Keep the printed pitch in the drawing requirement set, revisit guide-edge correspondence and the generating rule, and separate fitting data from source constraints reserved for validation. Report same-data residuals as fit quality. A user-approved alternate pitch changes only the approved delivery set; it does not validate the candidate surface.
+
+**Forbidden conclusions.** “The failed candidate proves the printed pitch is wrong.” “A small fit residual independently verifies the whole surface.” “The available views must be insufficient.”
+
+**Rule location.** [cross-reading.md](cross-reading.md#5-revisit-the-interpretation-when-new-evidence-conflicts); [geometry-acceptance.md](geometry-acceptance.md#free-form-surfaces).
+
+## R-20 — New required failures invalidate an earlier approved-scope conclusion
+
+**Input facts.** A saved model had a `PARTIAL` approved-delivery conclusion and many passing checks. Retrospective review finds that the build and checker shared a wrong expectation for a requirement still in both sets. New source-derived measurements prove that requirement fails. Only the written interpretation has been corrected.
+
+**Required decision.** Preserve the old artifact, expectations, measurements and conclusion as history; map replacement checks and report the current drawing and approved-delivery conclusions as `FAILED`. State that the model is unchanged. A later repair needs checks against the new version. Disclose prior exposure to the model, code or old reports; this review is retrospective.
+
+**Forbidden conclusions.** “The approved scope remains partial because a different deviation was approved.” “The corrected record repaired the model.” “Earlier passing counts cancel the failure.”
+
+**Rule location.** [geometry-acceptance.md](geometry-acceptance.md#overall-conclusion); [geometry-acceptance-report.md](../assets/templates/geometry-acceptance-report.md#6-known-non-conformances).
+
+## R-21 — A thread designation conflicts with section and mating geometry
+
+**Input facts.** A printed tolerance designation suggests an internal thread, while section material, a root relief and a mating bore support an external threaded feature with a separate internal passage.
+
+**Required decision.** Trace the root relief and passage separately and cross-read the mating evidence. Record the supported geometry interpretation and the inconsistent printed designation as distinct findings. Resolve the designation for a delivery that requires it, without treating the root diameter as the entire threaded feature's outer diameter.
+
+**Forbidden conclusions.** “The surrounding body must be enlarged before material and dimension ownership are checked.” “Silently replace the printed designation with a guessed one.”
+
+**Rule location.** [cross-reading.md](cross-reading.md#3-trace-dimensions-into-a-common-coordinate-system); [drawing-feature-ledger.md](../assets/templates/drawing-feature-ledger.md#42-controlling-dimensions-and-interpretation-changes).
