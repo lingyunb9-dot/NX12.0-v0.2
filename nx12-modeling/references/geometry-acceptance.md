@@ -55,9 +55,13 @@ An unrelated layer may be recorded as `N/A`, but it states why.
 
 Choose checks that would reject the plausible wrong interpretation identified in cross-reading. Radius, axis and position of a cylindrical surface alone can fit both an external boss and an internal hole. Combine them with material-side evidence, axial extent and connectivity. If using a face normal, verify its orientation relative to the solid on the target binding; a raw parametric surface normal is not automatically the outward solid normal.
 
+For asymmetric holes on a common axis, test the signed interval and entry side in the registered view frame. Pair checks at the required side with checks that would reject swapping the features to the opposite side. A radius and an infinite axis line can match both arrangements. Derive this side assignment from the source views rather than copying the construction code's sign convention.
+
 For a boss or raised strip, check material within it and void in the surrounding relief. For a fork, distinguish both ears, the central gap and the transverse bore. For keys or feet, check preserved sectors, intervening gaps and axial levels. Derive locations from source dimensions, then sample on appropriate sides away from boundary/tolerance ambiguity. Choosing points after observing the model merely to obtain passes does not establish conformance. These samples remain local evidence; use sections or surface-deviation checks between samples where required.
 
 When a corrected reading invalidates an old expectation, preserve that measurement with its original artifact, expected value and result. Separately explain the withdrawn basis or limited scope, map affected checks to replacement expectations, and rerun against the new version. Such explanations do not add to the five per-check statuses and do not convert historical results into measurements of the new model.
+
+When a known wrong artifact or measurement set is available within the authorized review scope, apply the corrected discriminating conditions to it as well as the repaired result, or show why the recorded wrong geometry would fail them. Retain both outcomes, distinguishing an executed rejection from an analytical expectation. If both pass, the proposed check has not distinguished that defect. If this comparison cannot be performed, disclose the missing evidence; do not invent a counterexample or make it a prerequisite for unrelated settled work.
 
 ### Holes
 
@@ -105,6 +109,14 @@ Check the key orthographic views and the related sections. When screenshots are 
 
 At the first complete build, use the [cross-reading review](cross-reading.md#5-revisit-the-interpretation-when-new-evidence-conflicts) to inspect high-risk material relationships in the actual model. Select views that expose the features rather than requiring the same screenshot set for every part.
 
+Match the source and model plane origin/offset, normal, viewing direction, screen axes and compared line type before computing a deviation. Test cut material, projected rear edges and silhouettes with their corresponding geometry; a complete cut-plane material mask still says nothing about a rear edge it never samples. Record offsets used to avoid boundary ambiguity and distinguish nominal intersections from chamfered or inset sections.
+
+### Completed measurements and comparable results
+
+Before using an output file as evidence, reconcile its schema, expected and actual records, sampled planes/levels/ranges, and terminal application result. A process exit code or a nonempty file does not establish completion. For interrupted work, retain the partial file and log, identify complete and incomplete subsets from the data, and report uncompleted required checks using the existing statuses. A later successful run replaces only the measurements it actually repeated; it does not complete a different interrupted scan.
+
+Version the expectations and measurement outputs when a scan window, source-point set, coordinate registration, method or threshold changes. Preserve the earlier failure with its original conditions. Explain a corrected condition from the source rather than expanding a window merely to obtain a pass. Compare errors or pass rates across runs only on matched datasets and criteria; state the optimization objective when quoting a best candidate. Curve serialization, sampled inverse-motion agreement and mesh distance each establish their own limited properties, not source conformity of a whole surface.
+
 ## Tolerances
 
 Keep these four apart:
@@ -146,6 +158,8 @@ Rules that hold for the drawing requirement set:
 - A requirement that does not apply is recorded as non-applicable **with its reason**.
 - A requirement is never removed from this set because it was done wrong, or because it could not be checked. Failing and unverified requirements stay in it.
 - An approved omission removes a requirement from the approved delivery set only. The requirement remains visible in the drawing set, marked as omitted by approval.
+
+A request to build or continue a candidate authorizes that work; it changes a conformance requirement only if the user actually approves that specific change. Keep candidate execution, drawing failures and any explicit delivery exclusions distinct.
 
 These are documentation concepts. They add no script field and no JSON contract.
 
@@ -197,7 +211,9 @@ An acceptance result is attached to specific artifacts. Record:
 - The model path, and the saved version or hash.
 - The drawing source, with page and view.
 - The modeling code version or hash, when there is one.
+- The construction provenance and input artifact, for a rebuild, code reuse or local repair.
 - The check code version or hash, when there is one.
+- The expectation dataset/version, coordinate registration and actual completed coverage.
 - The actual time the check ran.
 - The actual result.
 - Where the logs, screenshots, or measurement records are.

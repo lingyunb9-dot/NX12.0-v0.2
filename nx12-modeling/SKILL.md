@@ -2,12 +2,13 @@
 name: nx12-modeling
 metadata:
   version: "0.2"
+  revision: "r2-local-20261003"
 description: Develop, review, and validate Siemens NX 12 NXOpen journals and utilities in Python or C# for modeling, drafting, and drawing automation, and reconstruct NX 12 3D models from dimensioned engineering drawings. Use when the task involves writing or debugging NXOpen code, cleaning up a recorded journal, choosing builder call order, checking whether a specific NXOpen member exists in NX 12, rebuilding a part from a dimensioned drawing, section view, or image, or reviewing whether a reconstructed model matches its drawing. Do not use for general NX 12 usage, user-interface, installation, or licensing questions, and do not treat it as authority for NX 1847 or any later release. Drawing interpretation stays user-reviewed; this skill does not understand an arbitrary complex drawing on its own.
 ---
 
 # Siemens NX 12 NXOpen automation
 
-Iteration 0.2 — mandatory cross-reading for drawing-driven reconstruction.
+Iteration 0.2, local revision r2 — cross-reading with registered views and discriminating acceptance evidence.
 
 Generate NXOpen automation that is version-locked, evidence-backed, and safe to test.
 
@@ -31,7 +32,7 @@ Out of scope unless the user explicitly expands the task: C++ UFUN, CAM, CAE, Te
    - Feature creation and editing: [references/modeling-builders.md](references/modeling-builders.md)
    - Creating or editing 2D drawings, views, and annotations: [references/drawing-and-drafting.md](references/drawing-and-drafting.md)
    - Reconstructing 3D geometry from an existing engineering drawing: [references/drawing-reconstruction.md](references/drawing-reconstruction.md) and [references/cross-reading.md](references/cross-reading.md) — read both **before** fixing feature interpretations or writing the model.
-   - Deciding whether a model matches its drawing, or checking its dimensions, topology, or structure: [references/geometry-acceptance.md](references/geometry-acceptance.md) — read it **before** reporting a result, and write the outcome up with [assets/templates/geometry-acceptance-report.md](assets/templates/geometry-acceptance-report.md).
+   - Deciding whether a model matches its drawing, or checking its dimensions, topology, or structure: [references/geometry-acceptance.md](references/geometry-acceptance.md) — read it **before defining checks**, including checks that distinguish competing interpretations and verify completed measurement coverage; write the outcome up with [assets/templates/geometry-acceptance-report.md](assets/templates/geometry-acceptance-report.md).
    - Worked reconstruction and acceptance situations: [references/reconstruction-review-cases.md](references/reconstruction-review-cases.md)
    - Symbolic-thread geometry/readback or bounding-box discrepancies: [references/runtime-observations.md](references/runtime-observations.md) — local observations and the checks needed before relying on them.
 
@@ -49,7 +50,7 @@ These gates apply when the task rebuilds 3D geometry from a drawing, a section v
 
    Both directions of error matter. A request to look at, explain, or read-only review a drawing does not authorize modeling, saving, or export — do not start them because the drawing made a defect obvious. Equally, "do not re-ask" is not a licence to widen a request. Ask when the next step goes beyond what was authorized, when the target file or operation destination is unclear, when an object that is not authorized would be overwritten or modified, or when a key user choice changes the implementation. The part-protection and save/export rules under [Apply the execution safety gate](#apply-the-execution-safety-gate) are unchanged.
 
-   A photo or a thumbnail is not dimension evidence on the same footing as a dimensioned drawing or a section view.
+   Judge source provenance and annotation completeness separately from display format. Apply the evidence rules in [drawing-reconstruction.md](references/drawing-reconstruction.md#task-scope) to engineering-drawing renderings and appearance images.
 2. **Fix coordinates and cross-read before fixing features.** Record units, origin, axis directions, axial/radial/tangential sense, the observation direction of every principal view and section, the projection method only when the drawing gives evidence for it, the angular zero and positive direction, and any circumferential repeat count and spacing. Before choosing a feature type, dependent dimensions or construction operations, complete [mandatory cross-reading](references/cross-reading.md) for the relevant feature group. Record the views, material relationships, dimension ownership and datums, the interpretation supported, and a check that could expose the wrong interpretation. Critical unresolved contradictions block the affected feature; unrelated settled work may continue. For an existing-model review, do this retrospectively and record the actual timing. A drawing's clear requirement needs no additional user approval.
 
    Do not read four visible directions as four equal divisions, do not treat occlusion in an isometric view as absent geometry, and do not apply a left/right convention before the projection relationship is established.

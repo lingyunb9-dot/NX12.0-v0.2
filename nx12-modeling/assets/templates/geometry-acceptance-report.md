@@ -38,7 +38,9 @@ blank, and never defaulted to "all pass".
 | Units | {{UNIT}} |
 | Drawing source | {{DOCUMENT, REVISION, PAGE, VIEW}} |
 | Modeling code version or hash | {{HASH, or "not applicable: model was not built by a script in this task"}} |
+| Construction provenance | {{BLANK_PART_BUILD_OR_LOADED_COPY_REPAIR; INPUT_MODEL_HASH_IF_ANY; HELPER_CODE_REUSE_IF_ANY}} |
 | Check code version or hash | {{HASH, or "not applicable: checks were performed by hand"}} |
+| Expectation dataset and version | {{SOURCE_POINTS_CONDITIONS_AND_HASH; REPLACED_BASIS_IF_ANY}} |
 | Feature ledger used | {{LEDGER_PATH_OR_ID}} |
 | Acceptance run date and time | {{yyyy-MM-dd HH:mm}} |
 
@@ -88,7 +90,7 @@ Status values: `PASS` (suitable evidence exists and the condition is met), `FAIL
 
 Method rules that must be visible in this table:
 
-- For topology-sensitive features, state how the check distinguishes the plausible wrong interpretation recorded during cross-reading. Use material-side, extent and connectivity evidence alongside a surface's radius and axis; reference [the acceptance methods](../../references/geometry-acceptance.md#checks-that-distinguish-feature-interpretations).
+- For topology-sensitive features, state how the check distinguishes the plausible wrong interpretation recorded during cross-reading, including a swapped side where applicable. Record an available known-wrong comparison or its limitation; reference [the acceptance methods](../../references/geometry-acceptance.md#checks-that-distinguish-feature-interpretations).
 - A hole centre reading "outside the solid" appears with its limitation stated: it proves the sample point is not in material, and does not establish diameter or depth.
 - Bounding-box evidence is recorded with the limitation that it proves axis-aligned overall extents only. It never stands in for a diameter, a local dimension, or a surface check.
 - Point-containment checks record which points were chosen and why, including any boundary, hole-wall, hole-bottom, or must-remain-material samples, and state that a fixed point count proves nothing by itself.
@@ -96,6 +98,13 @@ Method rules that must be visible in this table:
 - Fillet and chamfer checks state which edges they act on; the absence of an NX error message is never recorded as evidence that a fillet exists.
 - Surface checks state the parameter interval actually sampled and are not described as a full mathematical proof.
 - Any visual confirmation that did not happen is written here as not performed. A screenshot, where one exists, does not prove a hidden internal cavity.
+- For view comparisons, record the registered plane, viewing and screen axes, line type, and any boundary inset. Identify whether the measured object is cut material, a projected edge or a silhouette.
+
+For sampled or interrupted runs, reconcile the following with the actual data under [completed measurements](../../references/geometry-acceptance.md#completed-measurements-and-comparable-results):
+
+| Run / artifact / dataset | Expected coverage | Actual complete coverage and partial remainder | Terminal application result and output integrity | Checks supported and checks still uncompleted |
+| --- | --- | --- | --- | --- |
+| {{RUN_AND_HASHES}} | {{PLANES_LEVELS_RANGES_RECORDS}} | {{COUNTS_AND_RANGES_VERIFIED_FROM_DATA}} | {{LOG_MARKER_SCHEMA_LENGTH_AND_ANY_MISMATCH}} | {{CHECK_IDS_AND_LIMITS; EXISTING_STATUSES_ONLY}} |
 
 ## 5. Unchecked items
 

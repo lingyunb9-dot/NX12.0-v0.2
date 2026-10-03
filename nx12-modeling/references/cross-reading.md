@@ -6,6 +6,8 @@ Use this procedure for reconstruction from a drawing and for checking a model ag
 
 For each feature or related feature group, locate its relevant principal, side, end and section views. Follow section arrows and establish the observation direction before transferring a position or angle. Use dimensioned views and sections to constrain geometry; use an isometric view to help check correspondence and visible topology.
 
+For asymmetric features, write the viewing direction and screen-right/screen-up vectors in the same model frame, plus the section plane's origin or offset when applicable. Track the same identifiable feature between views to check the sign convention before assigning left/right features. An unoriented axis line cannot distinguish its positive and negative ends. A CAD screenshot with a shifted cut plane or different viewing direction requires registration before comparison with the drawing.
+
 For ODG, SVG and vector PDF sources, inspect an actual rendered view to check annotations, leader and dimension-line endpoints, section material, and correspondence between views. XML text, OCR and extracted vector paths can help locate or measure evidence, but cannot alone establish its ownership without this visible drawing check. Reuse an existing clear, trustworthy rendering with traceable provenance; conversion need not be repeated. Record any missing or unreadable annotations rather than treating extracted text as a substitute.
 
 Record the geometric constraint each relevant view adds. For topology ambiguities such as hole/boss, slot/rib, two ears/one solid feature, or local/full-circumference geometry, check all available related views. Enlargements, crops and repeated screenshots of one view do not add independent geometric constraints. If one usable view exists, or a simple feature is fully determined by one view, record the single-view basis in [section 4](#4-record-the-decision-and-its-falsification-check), including any evidence limitation. Do not invent another view or impose a fixed view count on a fully determined feature. A critical unresolved interpretation blocks the affected feature; unrelated, settled work may continue.
@@ -17,6 +19,8 @@ Determine which regions contain material and which are empty, then identify the 
 For a feature whose interpretation could change its topology, keep the plausible alternatives until the drawing evidence distinguishes them. Write the observation that supports each alternative and the observation that would reject it. Keep the question at the unresolved level: asking whether a hole is through or blind is premature while a solid boss remains plausible.
 
 Check quantity, connectivity and material preserved around the feature. A distance between two walls in a section becomes a complete circular cavity only when the related end view and circumferential material distribution support that interpretation. Retain separate feet, keys and fork ears where the views require them.
+
+Classify a compared line as a cut-material boundary, a visible edge projected from behind the cut, a silhouette, or an annotation/reference line. Use the matching geometric test: containment on the cut plane cannot test a visible rear wall. An end-view projection can combine edges at several depths; establish a real section's level before using its outline as a loft profile. Transfer a section constraint only to the feature and axial interval it actually intersects.
 
 ## 3. Trace dimensions into a common coordinate system
 
@@ -49,6 +53,8 @@ For zero wall thickness, unexpected breakthrough, negative remaining wall thickn
 The exception describes the submitted geometry. It does not by itself establish a defect in the drawing. Keep nominal dimensions until the evidence supports a change; widening a rib to accommodate a misread hole can make the wrong geometry build successfully.
 
 When an interpretation changes, identify its dependent features and checks. Preserve the original measurements with their artifact and original expectations; record which expectations are withdrawn or limited, derive replacements from the corrected reading, and recheck the new model. A withdrawn basis is an explanation about old evidence, not an additional geometry status or permission to erase a failure.
+
+Recheck the affected interpretation against all available related views before propagating a correction. A reversed feature group does not establish that other slots or curves need mirroring; retain or change each group's orientation on its own source evidence.
 
 After the first complete build, inspect the actual model in the views that expose the high-risk features, including front/back and top/bottom where relevant. Check bosses, ear gaps, hole axes, keys and preserved feet against the drawing. Prefer native NX views when available, and bind screenshots to the actual artifact. If visual inspection is unavailable, disclose it and use suitable geometry/section evidence within its measured scope; follow [geometry-acceptance.md](geometry-acceptance.md#views-and-sections).
 

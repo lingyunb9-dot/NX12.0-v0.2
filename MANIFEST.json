@@ -1,10 +1,5 @@
 [
   {
-    "path": "nx12-modeling/SKILL.md",
-    "size": 22225,
-    "sha256": "3998BE23B3CEC080FF19C9DE675E202364E57D352D3D2D55EC3B31DAE49E751F"
-  },
-  {
     "path": "nx12-modeling/agents/openai.yaml",
     "size": 234,
     "sha256": "322C808EFF9300A43D77386E36A75FAA34776415F0E0F331199852BC2EC0EC66"
@@ -16,13 +11,13 @@
   },
   {
     "path": "nx12-modeling/assets/templates/drawing-feature-ledger.md",
-    "size": 11785,
-    "sha256": "A1B0A079FEECE63C1353C79CEE7A195755EF8B371F6913B30F5DDB6E51BD72AB"
+    "size": 12980,
+    "sha256": "19E624574480A7AF0BCD9CBDCE06788C679E8742BEC5A5030E767BBD91AEA1D5"
   },
   {
     "path": "nx12-modeling/assets/templates/geometry-acceptance-report.md",
-    "size": 15962,
-    "sha256": "6D912841F6D35EF0C032BA289CF39704963CEA521CAB068931A1085006213748"
+    "size": 17028,
+    "sha256": "EE0F36040A4E9A71E534A50A915A3C07A4B4897C30EA9AE70471F10119B3A62E"
   },
   {
     "path": "nx12-modeling/assets/templates/python-journal.py",
@@ -36,8 +31,8 @@
   },
   {
     "path": "nx12-modeling/references/cross-reading.md",
-    "size": 9451,
-    "sha256": "643C3916A7D004ADAD575E7F937944548846867BF9132CBD92AA647012BBAC98"
+    "size": 10682,
+    "sha256": "DBE52C2DBE1579EF91F3F6D4DC94F68A28EB2F51D788BF1B4E86472DA28BC610"
   },
   {
     "path": "nx12-modeling/references/drawing-and-drafting.md",
@@ -46,13 +41,13 @@
   },
   {
     "path": "nx12-modeling/references/drawing-reconstruction.md",
-    "size": 12519,
-    "sha256": "025998300C3FE5891AA0A00631EBF8BDA1DB56C15FF0F5A531E3275FDC539721"
+    "size": 15252,
+    "sha256": "E6C24362ED363DC45C7BB835E4A7386F63FF63D3D6E7BFA172DB6EA70BC21BA6"
   },
   {
     "path": "nx12-modeling/references/geometry-acceptance.md",
-    "size": 15256,
-    "sha256": "B7EEFF99E5C03E4CDD10CE1FE83887C3926602CA55A88B193A6B641A682F2A5D"
+    "size": 18265,
+    "sha256": "C86AEA45F0083E8C699D080C0E9A0930A2A6ACC02C3D459C59E01248008A8319"
   },
   {
     "path": "nx12-modeling/references/modeling-builders.md",
@@ -81,8 +76,8 @@
   },
   {
     "path": "nx12-modeling/references/runtime-observations.md",
-    "size": 2627,
-    "sha256": "C14F135A650D3A27832E911F55B9AF7D9FAC9D6F6FA43EEAFBD3DCA518A38EBD"
+    "size": 3353,
+    "sha256": "44B2551455F165DB3A1F7F242648A2AEC2E102245CA0E6FB206FA2D33F202927"
   },
   {
     "path": "nx12-modeling/references/source-index.md",
@@ -128,6 +123,11 @@
     "path": "nx12-modeling/scripts/validate-nx12-csharp.ps1",
     "size": 38153,
     "sha256": "F819AFCF04B7E722F289A6CE4DA9C4C97D2B37ACCE052637CA35B56357FF4AD9"
+  },
+  {
+    "path": "nx12-modeling/SKILL.md",
+    "size": 22522,
+    "sha256": "8F073AB17C1026C6F303298116409188994649C02768F41CFEE7EF2F5D4E085B"
   },
   {
     "path": "nx12-modeling/tests/test_nx12_skill.py",

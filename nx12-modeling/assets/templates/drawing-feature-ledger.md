@@ -73,10 +73,10 @@ Record the scopes that were actually requested. A request that already covers re
 | Angular zero and positive direction | {{ZERO_POSITION_AND_SIGN}} |
 | Circumferential repeat and spacing | {{COUNT_AND_ANGULAR_PITCH}} |
 
-| View or section | Identifier | Observation direction | Basis for that direction |
-| --- | --- | --- | --- |
-| {{MAIN_VIEW}} | {{V1}} | {{LOOKING_ALONG...}} | {{PRINTED_ARROW / LABEL / PROJECTION_SYMBOL / INFERRED_AND_FLAGGED_AS_UNRESOLVED}} |
-| {{SECTION}} | {{S1}} | {{...}} | {{...}} |
+| View or section | Identifier | Observation direction | Screen-right / screen-up in model axes | Plane origin/offset and normal, if section | Basis and shared feature used to check registration |
+| --- | --- | --- | --- | --- | --- |
+| {{MAIN_VIEW}} | {{V1}} | {{LOOKING_ALONG...}} | {{SIGNED_MODEL_VECTORS}} | {{NOT_APPLICABLE_OR_PLANE}} | {{ARROW_LABEL_OR_PROJECTION_BASIS; SAME_IDENTIFIABLE_FEATURE_IN_RELATED_VIEW}} |
+| {{SECTION}} | {{S1}} | {{...}} | {{...}} | {{...}} | {{...}} |
 
 Projection method (first-angle or third-angle): {{METHOD_AND_THE_EVIDENCE_FOR_IT, or "unresolved: no basis on the sheet — recorded as an open question"}}.
 
@@ -97,11 +97,21 @@ For drawing-driven work, complete [mandatory cross-reading](../../references/cro
 
 | feature_id / group | Related views and each added constraint | Material, quantity and connectivity | Dimension ownership, direction and datum chain | Interpretation and rejected alternatives, if ambiguous | Remaining uncertainty and basis for proceeding or blocking | Acceptance items that distinguish the interpretation |
 | --- | --- | --- | --- | --- | --- | --- |
-| {{F001}} | {{EACH_RELATED_VIEW_AND_ITS_CONSTRAINT; AVAILABLE_VIEW_LIMITATIONS}} | {{RETAINED_AND_EMPTY_REGIONS}} | {{RAW_MARK -> ENDPOINTS -> EDGE_OR_FACE -> DIRECTION_AND_DATUM -> LOCAL_OR_CIRCUMFERENTIAL_SCOPE}} | {{SELECTED_TYPE_AND_EVIDENCE_THAT_REJECTS_PLAUSIBLE_ALTERNATIVES}} | {{EVIDENCE_SUFFICIENT_FOR_SCOPE, INCLUDING_SINGLE_VIEW_BASIS_WHEN_USED / SPECIFIC_MISSING_EVIDENCE / EXPLICIT_USER_CHOICE_AND_SCOPE, in prose}} | {{A001, A004_AND_HOW_THEY_COULD_REJECT_THE_WRONG_TYPE}} |
+| {{F001}} | {{EACH_RELATED_VIEW_AND_ITS_CONSTRAINT; CUT_BOUNDARY_OR_PROJECTED_EDGE_OR_SILHOUETTE; AVAILABLE_VIEW_LIMITATIONS}} | {{RETAINED_AND_EMPTY_REGIONS}} | {{RAW_MARK -> ENDPOINTS -> EDGE_OR_FACE -> SIGNED_DIRECTION_AND_DATUM -> LOCAL_OR_CIRCUMFERENTIAL_SCOPE}} | {{SELECTED_TYPE_AND_EVIDENCE_THAT_REJECTS_PLAUSIBLE_ALTERNATIVES}} | {{EVIDENCE_SUFFICIENT_FOR_SCOPE, INCLUDING_SINGLE_VIEW_BASIS_WHEN_USED / SPECIFIC_MISSING_EVIDENCE / EXPLICIT_USER_CHOICE_AND_SCOPE, in prose}} | {{A001, A004_AND_HOW_THEY_COULD_REJECT_THE_WRONG_TYPE_OR_SWAPPED_SIDE}} |
 
 Record the reading's actual timing in section 1. Keep the evidence class of the numeric value separate from that of its ownership/type when they differ. For a single-view decision, fill in the determining annotations, material relationships, geometric conditions and evidence excluding plausible alternatives as required by [cross-reading section 4](../../references/cross-reading.md#4-record-the-decision-and-its-falsification-check). State view limitations rather than inventing corroboration. Completion of this record is not a geometry `PASS`; the completion criterion and treatment of critical unresolved items are in the linked procedure.
 
 Thread expression: {{WHAT THE ESTABLISHED DELIVERY REQUIREMENT ALLOWS OR REQUIRES FOR EACH THREADED FEATURE, AND WHAT THE MODEL ACTUALLY CARRIES}}. An expression that the requirement already allowed is not a simplification — record it here. If a requirement in force was later approved away or replaced, record that in section 6 instead.
+
+Thread length references, when relevant: {{ENDPOINTS_FOR_PROJECTION_RELIEF_CHAMFER_AND_REQUIRED_THREAD_INTERVAL; DERIVATIONS_AND_UNRESOLVED_ENGAGEMENT}}.
+
+### 4.2 Curve and surface construction, when applicable
+
+| Group | Profile source and actual section level | Motion law and section orientation | Actual guide input and constrained point/edge | Trims, retained side and end treatment | Source basis and unresolved choices |
+| --- | --- | --- | --- | --- | --- |
+| {{F00N}} | {{PROJECTION_OR_SECTION; VECTOR_TRANSFORM_AND_ESTIMATION_ERROR_IF_USED}} | {{PARAMETER_RANGE_UNITS_HAND_PHASE; FIXED_PLANE_OR_PATH_NORMAL}} | {{BUILDER_INPUT_OR_NONE; DISPLAY_HELPERS_SEPARATELY}} | {{BOUNDARIES_AND_LOCAL_SCOPE}} | {{EXPLICIT_DERIVED_USER_CONFIRMED_OR_UNRESOLVED_FOR_EACH_CHOICE}} |
+
+Use [the curve and surface rules](../../references/drawing-reconstruction.md#curves-and-surfaces); omit this table for tasks without such geometry.
 
 ## 5. Ambiguities and user confirmations
 

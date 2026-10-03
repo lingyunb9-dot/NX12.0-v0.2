@@ -118,6 +118,12 @@ Thread representation is decided by the delivery requirement, not by a default, 
 
 In all three, "no solid helical form was built" does not by itself mean that a 2D thread callout may be dropped, that a thread specification is unnecessary, that the drawing necessarily fails, or that the drawing necessarily passes.
 
+For a threaded projection, name the endpoints of each length: total projection, relief, chamfer, nominal cylindrical span and required full-thread or engagement interval. Derive only lengths supported by those endpoints. Total projection minus relief is not automatically full thread engagement; a chamfer or incomplete end turns can further limit it. Keep internal bore chamfers and external end chamfers attached to their own edges.
+
+## Extracted drawing geometry
+
+When measuring vector paths, record the page/view transform, rotation, scale, origin and units, and check their registration against the inspected rendering and known drawing marks. Evaluate curves on their parameterized paths; Bezier control handles are not boundary samples. Distinguish printed dimensions from vector-derived estimates, including fit residuals and sensitivity to a short or nearly straight arc. An unstable fitted radius supplies no controlling dimension. A leader landing inside a projected region identifies an annotation target only to the extent the other views support; it does not locate a unique 3D guide point.
+
 ## Curves and surfaces
 
 Before a formula becomes geometry, record:
@@ -136,9 +142,14 @@ Then respect these limits:
 - If the drawing does not make the angular unit clear, do not decide degrees or radians on your own.
 - Lofting through a few sections does not automatically produce an accurate helical surface.
 - A guide-line pitch alone does not determine section correspondence, a surface-generation rule or end treatment. Record those separately, and retain candidate constructions as candidates until their stated scope is established.
+- Separate the section-motion law, the guide actually supplied to the builder, and helper curves added for display or diagnosis. Name the constrained section point/edge and verify the builder's actual input and resulting geometry; a feature name or a subsequently added helix is not evidence that it generated the surface.
+- Distinguish fixed-plane rotating sections from sections normal to a path. Establish section orientation and point correspondence from the drawing, and keep a projected end outline distinct from an actual section before using either as a profile.
+- Record the generating surface, trimming boundaries, retained material side and end treatments separately. A span or an envelope circle constrains its stated location; it does not define the same root or material boundary over the entire height. A candidate blend cannot replace a specified chamfer without a basis.
 - The regions **between** sections need deviation checks as much as the sections themselves; that is where bulging appears.
 
 A numeric approximation is allowed when it is justified. State the reference geometry, the error bound, the sampling strategy, and the result. It is not allowed to adjust a radius or a control point that has no basis in the drawing, purely to bring the overall bounding box into range, and then report the result as conforming to the drawing.
+
+Interpret a failed parameter search within its tested construction family, source-point set, search range and objective. Failure of one fixed-section candidate does not establish that every fixed-section method fails, that a variable section is required, or that a printed pitch is wrong. Preserve these alternatives as unresolved when the evidence does not distinguish them.
 
 ## Handle ambiguity explicitly
 
@@ -152,6 +163,8 @@ A numeric approximation is allowed when it is justified. State the reference geo
 Advance by related feature group — for example the main body, the bottom structure, the middle holes and slots, the upper structure, and the free-form surfaces. After each group, check it against the matching ledger entries before extending the build. A group that fails its check is not carried forward as an assumption.
 
 When a material or dimension interpretation changes, revisit its dependent groups and acceptance conditions through [cross-reading](cross-reading.md#5-revisit-the-interpretation-when-new-evidence-conflicts). Preserve the old artifact and evidence; a successful repair does not retroactively validate the old reading.
+
+Record whether each delivered artifact was built from a blank part or repaired from a loaded model copy, naming the input artifact when one exists and any helper code reused. A newly saved filename alone does not establish a blank rebuild. A curve network or diagnostic construction is delivered and judged as that artifact, without implying a completed solid.
 
 Two habits to avoid:
 
